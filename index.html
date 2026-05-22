@@ -1,7 +1,85 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--  <base href=/snah_user/>-->
+
+<!--  <meta charset="UTF-8">-->
+<!--  <meta http-equiv="Content-Security-Policy"-->
+<!--        content="-->
+<!--        default-src * data: blob: 'unsafe-inline' 'unsafe-eval';-->
+<!--        connect-src * ws: wss:;-->
+<!--        img-src * data: blob:;-->
+<!--        script-src * 'unsafe-inline' 'unsafe-eval';-->
+<!--        style-src * 'unsafe-inline';-->
+<!--        font-src * data:;-->
+<!--        ">-->
+<!--  <meta content="IE=Edge" http-equiv="X-UA-Compatible">-->
+<!--  <meta name="description" content="A new Flutter project.">-->
+
+<!--  &lt;!&ndash; iOS meta tags & icons &ndash;&gt;-->
+<!--  <meta name="apple-mobile-web-app-capable" content="yes">-->
+<!--  <meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+<!--  <meta name="apple-mobile-web-app-title" content="snah_user">-->
+<!--  <link rel="apple-touch-icon" href="icons/Icon-192.png">-->
+
+<!--  &lt;!&ndash; Favicon &ndash;&gt;-->
+<!--  <link rel="icon" type="image/png" href="favicon.png"/>-->
+
+<!--  <title>snah_user</title>-->
+<!--  <link rel="manifest" href="manifest.json">-->
+
+<!--  <script>-->
+<!--    var serviceWorkerVersion = null;-->
+<!--  </script>-->
+
+<!--  <script>-->
+<!--    let snahMap;-->
+
+<!--    async function initMap() {-->
+<!--      const { Map } = await google.maps.importLibrary("maps");-->
+
+<!--      snahMap = new Map(document.getElementById("web-map"), {-->
+<!--        center: { lat: 22.7196, lng: 75.8577 },-->
+<!--        zoom: 14,-->
+<!--        disableDefaultUI: true,-->
+<!--        keyboardShortcuts: false,-->
+<!--        gestureHandling: "greedy"-->
+<!--      });-->
+<!--    }-->
+
+<!--    window.initMap = initMap;-->
+<!--  </script>-->
+<!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMaf7l3fDLy5YjQiCNnBMf2A7Si0hREIQ"></script>-->
+
+<!--    &lt;!&ndash; Agora Web SDK &ndash;&gt;-->
+<!-- <script src="iris-web-rtc_n450_w4220_0.8.6.js"></script>-->
+<!--  <script src="regula_face_bridge.js"></script>-->
+
+<!--  &lt;!&ndash; This script adds the flutter initialization JS code &ndash;&gt;-->
+<!--  <script src="flutter.js" defer></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--  <script>-->
+<!--    window.addEventListener('load', function(ev) {-->
+<!--      // Download main.dart.js-->
+<!--      _flutter.loader.loadEntrypoint({-->
+<!--        serviceWorker: {-->
+<!--          serviceWorkerVersion: serviceWorkerVersion,-->
+<!--        },-->
+<!--        onEntrypointLoaded: function(engineInitializer) {-->
+<!--          engineInitializer.initializeEngine().then(function(appRunner) {-->
+<!--            appRunner.runApp();-->
+<!--          });-->
+<!--        }-->
+<!--      });-->
+<!--    });-->
+<!--  </script>-->
+<!--</body>-->
+<!--</html>-->
 <!DOCTYPE html>
 <html>
 <head>
-  <base href="$FLUTTER_BASE_HREF">
+  <base href="/snah_user/">
 
   <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy"
@@ -13,24 +91,19 @@
         style-src * 'unsafe-inline';
         font-src * data:;
         ">
+
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
 
-  <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="snah_user">
+
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>snah_user</title>
   <link rel="manifest" href="manifest.json">
 
-  <script>
-    var serviceWorkerVersion = null;
-  </script>
+  <title>snah_user</title>
 
   <script>
     let snahMap;
@@ -49,30 +122,18 @@
 
     window.initMap = initMap;
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMaf7l3fDLy5YjQiCNnBMf2A7Si0hREIQ"></script>
 
-    <!-- Agora Web SDK -->
- <script src="iris-web-rtc_n450_w4220_0.8.6.js"></script>
+  <script
+          async
+          src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAP_KEY&libraries=places&loading=async">
+  </script>
+
+  <script src="iris-web-rtc_n450_w4220_0.8.6.js"></script>
   <script src="regula_face_bridge.js"></script>
 
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
+  <script src="flutter_bootstrap.js" async></script>
 </head>
+
 <body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
-    });
-  </script>
 </body>
 </html>
